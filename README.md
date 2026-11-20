@@ -25,6 +25,16 @@ The notarized direct download of HelioFITS Peek, for Finder and Quick Look previ
 (macOS 14.5 or later; Apple Silicon and Intel). It installs the same app as the Mac App Store; use one
 or the other. Updates: `brew upgrade --cask hfpeek`.
 
+## HelioFITS Suite (both apps at once)
+
+```
+brew install --cask GillySpace27/tap/heliofits-suite
+```
+
+A meta-cask that installs HelioFITS Peek and HelioFITS Studio. It holds no app of its own, so uninstalling it
+leaves the two apps in place. To add a suite app, add its cask to the `depends_on cask:` list in
+`Casks/heliofits-suite.rb`.
+
 ## Why a tap
 
 Homebrew's main cask repository (`homebrew/cask`) only accepts software that meets its notability
