@@ -1,11 +1,12 @@
 # Homebrew tap for the HelioFITS Suite
 
-Two Mac casks live here: HelioFITS Studio (`hfstudio`) and HelioFITS Peek (`hfpeek`).
+Three Mac casks live here: HelioFITS Studio (`hfstudio`), HelioFITS Peek (`hfpeek`) and Heliogram (`heliogram`).
 
 ```
 brew tap GillySpace27/tap       # once
 brew install hfstudio           # HelioFITS Studio
 brew install hfpeek             # HelioFITS Peek
+brew install heliogram          # Heliogram
 ```
 
 The one-line form works without tapping first: `brew install --cask GillySpace27/tap/hfstudio` (or `.../hfpeek`).
@@ -25,6 +26,12 @@ The notarized direct download of HelioFITS Peek, for Finder and Quick Look previ
 (macOS 14.5 or later; Apple Silicon and Intel). It installs the same app as the Mac App Store; use one
 or the other. Updates: `brew upgrade --cask hfpeek`.
 
+## Heliogram (`heliogram`)
+
+The live Sun on your Mac's screens (macOS 13 or later; Apple Silicon and Intel). The app updates itself, so
+`brew upgrade --cask --greedy heliogram` is only needed to make Homebrew check anyway. Details:
+<https://gilly.space/heliogram/>. Not part of the HelioFITS Suite cask.
+
 ## HelioFITS Suite (both apps at once)
 
 ```
@@ -42,7 +49,7 @@ requirements, and neither app does yet, so a bare `brew install hfstudio` with n
 needs no approval. If either app is later accepted into `homebrew/cask`, the token stays the same and this tap
 can point at it.
 
-## Releasing: bump both casks
+## Releasing: bump the casks
 
 Each release must update its cask here, or `brew upgrade` stays on the old version.
 
@@ -55,4 +62,6 @@ Each release must update its cask here, or `brew upgrade` stays on the old versi
   only for the Mac App Store has none.
 - Never put `--zap` in a test: Studio's zap trashes `~/HFStudio`, Peek's trashes its containers. Test with
   `brew install --cask --appdir=<temp dir> GillySpace27/tap/<token>`, then a plain `brew uninstall`.
+- **Heliogram:** bump `Casks/heliogram.rb` by hand: `version "<version>"` and the `sha256` of
+  `https://gilly.space/heliogram/Heliogram-<version>.dmg` (`shasum -a 256`). The numbered dmg must be on the site first.
 - Renaming a cask: `git mv` the file and add `{"old": "new"}` to `cask_renames.json`; never delete the old mapping.
