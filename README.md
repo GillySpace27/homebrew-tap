@@ -6,6 +6,7 @@ Three Mac casks live here: HelioFITS Studio (`hfstudio`), HelioFITS Peek (`hfpee
 brew tap GillySpace27/tap       # once
 brew install hfstudio           # HelioFITS Studio
 brew install hfpeek             # HelioFITS Peek
+brew install heliogram          # Heliogram
 ```
 
 The one-line form works without tapping first: `brew install --cask GillySpace27/tap/hfstudio` (or `.../hfpeek`).
@@ -48,7 +49,7 @@ requirements, and neither app does yet, so a bare `brew install hfstudio` with n
 needs no approval. If either app is later accepted into `homebrew/cask`, the token stays the same and this tap
 can point at it.
 
-## Releasing: bump both casks
+## Releasing: bump the casks
 
 Each release must update its cask here, or `brew upgrade` stays on the old version.
 
