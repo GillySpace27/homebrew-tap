@@ -1,12 +1,12 @@
 cask "hfstudio" do
-  version "0.9.2"
+  version "0.9.4"
 
   on_arm do
-    sha256 "84bf6bdfa3c2b6ce15c90536a090078416f4176eb5a7eb9bcc03a075823edefb"
+    sha256 "780fa9be8f86e3bd77ca1c4cf3bc18f94a948d96fb22cc6219f37c4f5a916155"
     url "https://github.com/GillySpace27/HelioFITS-Studio/releases/download/v#{version}/HFStudio-#{version}.dmg"
   end
   on_intel do
-    sha256 "02177aac67d43b3b3e9d8eb79787fad27761e6d6193e5712e7bb4b0508c16a1a"
+    sha256 "8af5d685861d613c26a40802f4c5cce3bfc0b7cd927bbdc977a71ac09c8b7638"
     url "https://github.com/GillySpace27/HelioFITS-Studio/releases/download/v#{version}/HFStudio-#{version}-intel.dmg"
   end
 
